@@ -11,10 +11,8 @@ Laplace neural operator (LNO), which incorporates the pole-residue relationship 
 torch                1.13.1+cu117
 
 
-# Files
-Each folder corresponds to one example in the LNO paper. In each folder, it includes both data and code for this example:
-* `main.py` is the main file to run the code.
-* `data.mat` is the data used in the corresponding example.
+# Code
+This website offers two versions of LNO code. The first version is used in all examples except Burger equation. This code regards the system poles and residues as training parameters (described in the Methods section), which avoids the network overfitting and performs well in extrapolation problems.  Although writing system poles and residues into partial-fraction form avoids the network overfitting, the LNO cannot deeply learn due to this strict formulation in interpolation problem. The second version, which is used in Burger equation, remains system poles and residues as training parameters for the transient term (the first term), but the steady-state term follows the idea of FNO which regards FRF as the the training parameters (the second term). When implementing the proposed method, the transient and steady-state terms are decoupled, allowing more flexibility of the LNO method for operator learning.
 
 # Citations
 ```
