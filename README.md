@@ -14,6 +14,10 @@ torch                1.13.1+cu117
 # Code
 This website offers two versions of LNO code. The first version is used in all examples except Burger equation. This code regards the system poles and residues as training parameters (described in the Methods section), which avoids the network overfitting and performs well in extrapolation problems.  Although writing system poles and residues into partial-fraction form avoids the network overfitting, the LNO cannot deeply learn due to this strict formulation in interpolation problem. The second version, which is used in Burger equation, remains system poles and residues as training parameters for the transient term (the first term), but the steady-state term follows the idea of FNO which regards FRF as the the training parameters (the second term). When implementing the proposed method, the transient and steady-state terms are decoupled, allowing more flexibility of the LNO method for operator learning.
 
+# Data
+The data for all examples except Burger equation, Brusselator and shallow-water equations are in the corresponding folders. Since the data for Burger equation, Brusselator and shallow-water equations are too big to upload, one can request the data by sending email to qianying_cao@brown.edu.
+
+
 # Citations
 ```
 @article{cao2023lno,
