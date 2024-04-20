@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/626164781.svg)](https://zenodo.org/doi/10.5281/zenodo.11002001)
+
 # Laplace Neural Operator
 
 This repo contains a PyTorch implementation for the paper [Laplace Neural Operator for Solving Differential Equations](https://arxiv.org/abs/2303.10528)
