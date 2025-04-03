@@ -1,0 +1,2 @@
+There is a typo in the description of the coefficients of the equation. 
+The correct coeffients are D=1-0.95/pi^2, and k=1.
